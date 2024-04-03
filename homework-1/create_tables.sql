@@ -2,41 +2,44 @@
 CREATE TABLE employees
 (
     Id SERIAL PRIMARY KEY,
-    FirstName CHARACTER VARYING(30),
-    LastName CHARACTER VARYING(30),
-    Email CHARACTER VARYING(30),
+    FirstName CHARACTER VARYING(100),
+    LastName CHARACTER VARYING(100),
+    Email CHARACTER VARYING(100),
     Age INTEGER,
-	phonework CHARACTER VARYING(30),
-	phonecell CHARACTER VARYING(30),
-	phonehomeaddress CHARACTER VARYING(30),
+	phonework CHARACTER VARYING(100),
+	phonecell CHARACTER VARYING(100),
+	homeaddress CHARACTER VARYING(100),
 	education CHARACTER VARYING(100),
 	salary REAL,
-	drivers_license CHARACTER VARYING(30),
+	drivers_license CHARACTER VARYING(100),
 	car CHARACTER VARYING(30),
-	presence_of_diseases CHARACTER VARYING(30),
-	medical_policy CHARACTER VARYING(30)
+	presence_of_diseases CHARACTER VARYING(100),
+	medical_policy CHARACTER VARYING(100)
 );
 
 CREATE TABLE clients
 (
     Id SERIAL PRIMARY KEY,
-    FirstName CHARACTER VARYING(30),
-    LastName CHARACTER VARYING(30),
-    Email CHARACTER VARYING(30),
-	phone CHARACTER VARYING(30),
-	home_address CHARACTER VARYING(30),
+    FirstName CHARACTER VARYING(100),
+    LastName CHARACTER VARYING(100),
+    Email CHARACTER VARYING(100),
+	phone CHARACTER VARYING(100),
+	home_address CHARACTER VARYING(100),
 	number_order_history_delivery CHARACTER VARYING(500),
-    bonus_point INTEGER
+	bonus_point INTEGER
 );
 
 CREATE TABLE orders
 (
     Id SERIAL PRIMARY KEY,
-    order_number CHARACTER VARYING(30),
-    order_time CHARACTER VARYING(30),
-	addrees CHARACTER VARYING(30),
-    Email CHARACTER VARYING(30),
-	order_composition CHARACTER VARYING(30),
-	receipt_number CHARACTER VARYING(30),
-	Payment_method CHARACTER VARYING(30)
+    order_number CHARACTER VARYING(100),
+    order_time CHARACTER VARYING(100),
+	addrees CHARACTER VARYING(100),
+    Email CHARACTER VARYING(100),
+	order_composition CHARACTER VARYING(100),
+	receipt_number CHARACTER VARYING(100),
+	payment_method CHARACTER VARYING(100)
+
 );
+
+
