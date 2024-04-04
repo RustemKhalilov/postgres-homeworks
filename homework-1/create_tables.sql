@@ -1,45 +1,28 @@
 -- SQL-команды для создания таблиц
 CREATE TABLE employees
 (
-    Id SERIAL PRIMARY KEY,
-    FirstName CHARACTER VARYING(100),
-    LastName CHARACTER VARYING(100),
-    Email CHARACTER VARYING(100),
-    Age INTEGER,
-	phonework CHARACTER VARYING(100),
-	phonecell CHARACTER VARYING(100),
-	homeaddress CHARACTER VARYING(100),
-	education CHARACTER VARYING(100),
-	salary REAL,
-	drivers_license CHARACTER VARYING(100),
-	car CHARACTER VARYING(30),
-	presence_of_diseases CHARACTER VARYING(100),
-	medical_policy CHARACTER VARYING(100)
+    employee_id CHARACTER VARYING(30),
+    first_name CHARACTER VARYING(100),
+    last_name CHARACTER VARYING(100),
+    birth_date CHARACTER VARYING(100),
+    title CHARACTER VARYING(100),
+	notes text
 );
 
-CREATE TABLE clients
+CREATE TABLE customers
 (
-    Id SERIAL PRIMARY KEY,
-    FirstName CHARACTER VARYING(100),
-    LastName CHARACTER VARYING(100),
-    Email CHARACTER VARYING(100),
-	phone CHARACTER VARYING(100),
-	home_address CHARACTER VARYING(100),
-	number_order_history_delivery CHARACTER VARYING(500),
-	bonus_point INTEGER
+    customer_id CHARACTER VARYING(30),
+    company_name CHARACTER VARYING(100),
+    contact_name CHARACTER VARYING(100)
 );
 
 CREATE TABLE orders
 (
-    Id SERIAL PRIMARY KEY,
-    order_number CHARACTER VARYING(100),
-    order_time CHARACTER VARYING(100),
-	addrees CHARACTER VARYING(100),
-    Email CHARACTER VARYING(100),
-	order_composition CHARACTER VARYING(100),
-	receipt_number CHARACTER VARYING(100),
-	payment_method CHARACTER VARYING(100)
-
+    order_id CHARACTER VARYING(30),
+    customer_id CHARACTER VARYING(100),
+    employee_id CHARACTER VARYING(100),
+	order_date CHARACTER VARYING(100),
+    ship_city CHARACTER VARYING(100)
 );
 
 
